@@ -13,4 +13,5 @@ AlgoStudy(알쓰)
 #### Problem List
 |날짜|번호|문제|한길|준아|경대|성수|
 |---|---|---|---|---|---|---|
-|0516|[bj16986](https://www.acmicpc.net/problem/16986)|인싸들의 가위바위보|||💪|
+|250516|[bj16986](https://www.acmicpc.net/problem/16986)|인싸들의 가위바위보|||💪|
+|250624|[bj32196](https://www.acmicpc.net/problem/32196)|급행 열차||||
