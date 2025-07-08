@@ -1,0 +1,46 @@
+package bj2606;
+
+import java.util.*;
+
+public class Main {
+    static List<Integer>[] graph;     // 인접 리스트
+    static boolean[] visited;         // 방문 여부 체크
+    static int count = 0;             // 감염된 컴퓨터 수 카운트
+
+    public static void main(String[] args) {
+
+        //바이러스 https://www.acmicpc.net/problem/2606
+
+        // 여기서 테스트 입력값을 직접 세팅합니다
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt();  // 컴퓨터 수
+        int M = sc.nextInt();  // 연결 쌍 수
+
+        graph = new ArrayList[N + 1];
+        for (int i = 1; i <= N; i++) graph[i] = new ArrayList<>();
+
+        for (int i = 0; i < M; i++) {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            graph[a].add(b);
+            graph[b].add(a);
+        }
+
+        visited = new boolean[N + 1];
+        dfs(1);
+
+        System.out.println("감염된 컴퓨터 수: " + (count - 1));
+    }
+
+    static void dfs(int node) {
+        visited[node] = true;
+        count++;  // 방문할 때마다 감염 컴퓨터 수 증가
+
+        for (int next : graph[node]) {
+            if (!visited[next]) {
+                dfs(next);
+            }
+        }
+    }
+}
