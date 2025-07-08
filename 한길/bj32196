@@ -1,0 +1,43 @@
+package bj32196;
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        //급행열차 https://www.acmicpc.net/problem/32196
+
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt();
+        int M = sc.nextInt();
+        long K = sc.nextLong();
+        long X = sc.nextLong();
+        long Y = sc.nextLong();
+
+        long[] A = new long[N];
+        long[] B = new long[N];
+        long[][] deltaWithAB = new long[N][3]; // delta, A_i, B_i
+
+        for (int i = 0; i < N; i++) {
+            A[i] = sc.nextLong();
+            B[i] = sc.nextLong();
+            long delta = X * A[i] - Y * B[i];
+            deltaWithAB[i][0] = delta;
+            deltaWithAB[i][1] = A[i];
+            deltaWithAB[i][2] = B[i];
+        }
+
+        Arrays.sort(deltaWithAB, Comparator.comparingLong(o -> o[0]));
+
+        long sumA = 0;
+        long sumB = 0;
+        for (int i = 0; i < M; i++) {
+            sumA += deltaWithAB[i][1];
+            sumB += deltaWithAB[i][2];
+        }
+
+        long total = X * (K + sumA) + Y * (K - sumB);
+        System.out.println(total);
+    }
+}
