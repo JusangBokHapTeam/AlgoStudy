@@ -7,7 +7,7 @@ AlgoStudy(알쓰)
 ## 문제선정 난이도
 프로그래머스 1 ~ 2
 <br>
-백준 실 3 ~ 골 5 
+백준 실 3 ~ 골 4 
 <br>
 <br>
 점진적 상향 예정
@@ -19,6 +19,7 @@ AlgoStudy(알쓰)
 #### Problem List
 |날짜|번호|선정자|문제|한길|준아|경대|성수|
 |---|---|---|---|---|---|---|---|
+|250709|[bj1541](https://www.acmicpc.net/problem/1541)|성수|잃어버린 괄호|||| 
 |250703|[bj2606](https://www.acmicpc.net/problem/2606)|준아|바이러스||🐣|🐧| 🐢 
 |250703|[bj8911](https://www.acmicpc.net/problem/8911)|성수|거북이||🐣|🐧| 🐢
 |250703|[bj32196](https://www.acmicpc.net/problem/32196)|경대|급행 열차||🐣|🐧| 🐢
