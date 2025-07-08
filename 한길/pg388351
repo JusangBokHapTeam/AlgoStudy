@@ -1,0 +1,75 @@
+package pg388351;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        //유연근무제 https://school.programmers.co.kr/learn/courses/30/lessons/388351
+
+        // 테스트 예제
+        int[] schedules = {700, 800, 1100};
+        int[][] timelogs = {
+                {710, 2359, 1050, 700, 650, 631, 659},
+                {800, 801, 805, 800, 759, 810, 809},
+                {1105, 1001, 1002, 600, 1059, 1001, 1100}
+        };
+        int startday = 5; // 월요일
+
+        int result = solution(schedules, timelogs, startday);
+        System.out.println("상품 받을 직원 수: " + result);
+    }
+
+    public static int solution(int[] schedules, int[][] timelogs, int startday) {
+        int answer = 0;
+        int[] weekIndex = new int[7];
+        int day = startday;
+        weekIndex[0] = day;
+
+        for(int i = 0; i < 7 ; i++) {
+            weekIndex[i] = day;
+            if(weekIndex[i] == 7) {
+                day = 1;
+            } else {
+                day++;
+            }
+        }
+
+        for(int i = 0 ; i < schedules.length; i ++) { //i 직원(희망출근일)
+            int hr = schedules[i] / 100;
+            int min = schedules[i] % 100;
+            int allow = min + 10;
+            if(allow > 60) {
+                hr += 1;
+                min = allow - 60;
+            } else {
+                min += 10;
+            }
+
+            int chkCnt = 0;
+            int weekendCnt = 0;
+            for(int j = 0 ; j < timelogs[i].length; j ++) {// 직원의 j일차 출근한 시각
+                if(weekIndex[j] == 6 || weekIndex[j] == 7) {
+                    weekendCnt++;
+                } else {
+                    int realHr = timelogs[i][j] / 100;
+                    int realMin = timelogs[i][j] % 100;
+                    if(realHr < hr) {//실출근시간이 희망출근시보다 작거나 같아야
+                        chkCnt ++;
+                    } else {
+                        if(realHr == hr) {
+                            if(realMin <= min) {
+                                chkCnt++;
+                            }
+                        }
+                    }
+                }
+            }
+            if((7-weekendCnt) == chkCnt) {
+                answer++;
+            }
+        }
+        return answer;
+    }
+}
