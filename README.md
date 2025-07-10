@@ -22,7 +22,7 @@ AlgoStudy(알쓰)
 |2회차|[bj1021](https://www.acmicpc.net/problem/1021)|경대|회전하는큐|||| 
 |2회차|[pg389479](https://school.programmers.co.kr/learn/courses/30/lessons/389479)|한길|서버증설횟수|||| 
 |2회차|[bj1912](https://www.acmicpc.net/problem/1912)|준아|연속합|||| 
-|2회차|[bj1541](https://www.acmicpc.net/problem/1541)|성수|잃어버린 괄호|||| 
+|2회차|[bj1541](https://www.acmicpc.net/problem/1541)|성수|잃어버린 괄호|||🐧| 
 |1회차|[bj2606](https://www.acmicpc.net/problem/2606)|준아|바이러스||🐣|🐧| 🐢 
 |1회차|[bj8911](https://www.acmicpc.net/problem/8911)|성수|거북이||🐣|🐧| 🐢
 |1회차|[bj32196](https://www.acmicpc.net/problem/32196)|경대|급행 열차||🐣|🐧| 🐢
