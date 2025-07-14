@@ -1,0 +1,65 @@
+import java.io.StreamTokenizer;
+import java.io.StringReader;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
+public class bj1541 {
+    public static void main(String[] args) {
+        Queue<Integer> addValues = new LinkedList<>();
+        //잃어버린 괄호 https://www.acmicpc.net/problem/1541
+        //인덱스별 문자+숫자 (중셉)
+        //최소가 되려면? 앞에 -가 붙고 +가 있는것들끼리 괄호로 묶는다. +-두종류로 parse -> 파싱방법을 찾다가 StreamTokenizer 라는게 있는지 몰라서 적용
+        //앞에 -가 있으면 그 뒤의 다음 -가 나올때까지 숫자를 더한다-> idx로 queue에 저장
+        //차례로 재계산
+        Scanner sc = new Scanner(System.in);
+        String mathStr = sc.nextLine();
+
+        StreamTokenizer tokenizer = new StreamTokenizer(new StringReader(mathStr));
+        tokenizer.ordinaryChar('+');
+        tokenizer.ordinaryChar('-');
+        try {
+            int tokenType;
+            boolean minus = false;
+            while ((tokenType = tokenizer.nextToken())!=StreamTokenizer.TT_EOF) {
+
+                switch (tokenType) {
+                    case '+' :
+                        minus = false;
+                        break;
+                    case '-' :
+                        minus = true;
+                        break;
+                    case StreamTokenizer.TT_NUMBER:
+//                        System.out.println("val = " + (int) tokenizer.nval);
+                        System.out.println("peek = " + addValues.peek());
+
+                        if(addValues.isEmpty()) {
+                            System.out.println("들어오나요");
+                            addValues.offer((int) tokenizer.nval);
+                        } else {
+                            if(minus) {
+                                addValues.offer(((int) tokenizer.nval) * -1);
+                            } else {
+//                              poll해서 더하고 저장
+                                addValues.offer(((int) tokenizer.nval));
+                                //
+                            }
+                        }
+                        break;
+                }
+            }
+        } catch (Exception e) {
+
+        }
+
+        int answer = 0;
+        for(int i : addValues) { 
+            System.out.println("q = " + i);
+
+            answer += i;
+        }
+
+        System.out.println("answer = " + answer);
+    }
+}
