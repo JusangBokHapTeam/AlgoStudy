@@ -1,0 +1,31 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+class Solution {
+    public int solution(int[] players, int m, int k) {
+        
+        //https://school.programmers.co.kr/learn/courses/30/lessons/389479        
+        
+        int answer = 0;
+        
+        int nowServer = 0; //해당 회차에 띄워져있는 서버 수
+        Queue<Integer> serverQue = new LinkedList<>(); //삭제용
+
+        for (int i = 0; i < players.length; i++) {
+            if (i >= k) {
+                //삭제할 큐를 반환하면서 현재 서버에서 차감
+                nowServer -= serverQue.remove();
+            }
+            int n = (players[i] / m); //필요최소대수
+            int newadd = (n - nowServer) > 0? n - nowServer : 0;
+            //필요최소대수 - 현재 띄워진 대수 = 늘릴 대 수
+            
+            //제거용 큐에 넣는다
+            serverQue.offer(newadd);
+            nowServer += newadd;
+            answer += newadd;
+        }
+
+        return answer;
+    }
+}
