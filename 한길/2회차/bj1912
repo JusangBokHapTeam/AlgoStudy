@@ -1,0 +1,28 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class bj1912 {
+    public static void main(String[] args) throws IOException {
+        //연속합 https://www.acmicpc.net/problem/1912
+        Scanner sc = new Scanner(System.in);
+        String countStr = sc.nextLine();
+        String sequence = sc.nextLine();
+
+        String[] nums = sequence.split(" ");
+        int count = Integer.parseInt(countStr);
+        int totalMax = 0;
+        int[] sumArr = new int[count];
+
+        sumArr[0] = Integer.parseInt(nums[0]);
+
+        for(int i = 1; i < nums.length; i ++) {
+            int num = Integer.parseInt(nums[i]);
+            int value = sumArr[i-1] + num;
+            sumArr[i] = Math.max(num, value);
+            if(totalMax < sumArr[i]) {
+                totalMax = sumArr[i];
+            }
+        }
+        System.out.println(totalMax);
+    }
+}
