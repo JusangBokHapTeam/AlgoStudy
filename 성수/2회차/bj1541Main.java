@@ -9,6 +9,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        //st.tokenizer의 활용 
         StringTokenizer st = new StringTokenizer(br.readLine(), "+-", true);
 
         ArrayDeque<String> initQueue = new ArrayDeque<>();
