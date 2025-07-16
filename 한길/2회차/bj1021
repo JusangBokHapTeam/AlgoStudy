@@ -1,0 +1,43 @@
+import java.io.IOException;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        //회전하는 큐 https://www.acmicpc.net/problem/1021
+        Scanner sc = new Scanner(System.in);
+        // 1) N, M 읽기
+        int N = sc.nextInt();
+        int M = sc.nextInt();
+
+        int[] targets = new int[M];
+        for (int i = 0; i < M; i++) {
+            targets[i] = sc.nextInt();
+//            System.out.print(targets[i] + " | ");
+        }
+
+        //큐 생성
+        LinkedList<Integer> queue = new LinkedList<>();
+        for (int i = 1; i <= M; i++) {
+            queue.add(i);
+        }
+        int totalOperations = 0;
+        System.out.println(totalOperations);
+    }
+
+    public static int moveIndexLeft (int currIdx, int targetIdx, LinkedList<Integer> list) {
+        //큐의 원소를 모두 1->2..k 로
+        return 0;
+    }
+
+    public static int moveIndexRight (int currIdx, int targetIdx, LinkedList<Integer> list) {
+        //큐의 원소를 모두 1->..k-1 로
+        return 0;
+    }
+
+    public static int peekFirst (LinkedList<Integer> list) {
+        //인덱스 모두 왼쪽으로 이동
+        return 0;
+    }
+
+}
