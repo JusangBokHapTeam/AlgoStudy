@@ -19,7 +19,7 @@ AlgoStudy(알쓰)
 #### Problem List
 |회차|번호|선정자|문제|한길|준아|경대|성수|
 |---|---|---|---|---|---|---|---|
-|3회차|[bj2343](https://www.acmicpc.net/problem/2343)|준아|기타 레슨||||
+|3회차|[bj2343](https://www.acmicpc.net/problem/2343)|준아|기타 레슨||🐣||
 |3회차|[bj1931](https://www.acmicpc.net/problem/1931)|성수|회의실배정||||⏰
 |3회차|[bj11727](https://www.acmicpc.net/problem/11727)|한길|2×n 타일링 2||||
 |2회차|[bj1021](https://www.acmicpc.net/problem/1021)|경대|회전하는큐|❓|🐣|🐧|❓
