@@ -1,0 +1,48 @@
+import java.util.Scanner;
+import java.util.Stack;
+public class bj11727 {
+    public static void main(String[] args) {
+        //손으로 그려서 몇번 체크해 본 결과 -_- n이 늘어나는 만큼의 피보나치 수열=경우의 수가 되는 듯 하다.
+        // ->몇번째까지 피보나치 수열을 실행할 것인가? 
+        //[피보나치 수열]
+        // n인덱스의 값이 n-2, n-1인덱스를 더한 값으로 이루어진 수열이다.
+        // -활용: 이 수열에서 연속하는 두 항의 비율은 1.618에 가까워지는데, 이 비율을 황금비라 한다. 또는 경우의 수 계산.
+        // -실제 개발이나 알고리즘에서는 어떤 쓰임이 있을지 잘 모르겠다-_-
+        // 다 풀어보니 그냥 공식을 외워야되는 문제같다....
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] dp = new int[1001]; // n은 최대 1000
+        dp[0] = 1;
+        dp[1] = 1;
+        for (int i = 2; i <= n; i++) {
+            dp[i] = (dp[i - 1] + dp[i - 2] * 2) % 10007;
+        }
+
+        System.out.println(dp[n]);
+
+        //더해질 두 숫자를 저장할 데이터는 스택으로 한다.
+//        Stack<Integer> stack = new Stack<>();
+//        int currentValue = 1;
+//        for(int i = 0; i < n; i ++) {
+//            if(i <= 1) {
+//                //0,1번째 인덱스는 세팅해준다
+//                stack.push(currentValue);
+//            } else {
+//                //pop은 조회+제거, peek은 조회
+//                //연산에 사용될 두 값을 pop한다.
+//                int val1 = stack.pop();
+//                int val2 = stack.pop();
+//                currentValue = val1 + val2*;
+//                //더 상단에 있던 숫자를 다시 먼저 스택에 넣어준다
+//                stack.push(val1);
+//                //신규 값을 쌓아준다.
+//                stack.push(currentValue);
+//
+//            }
+//            System.out.print(" " + currentValue);
+//
+//        }
+
+//        System.out.println("  answer = " + currentValue % 10007);
+    }
+}
