@@ -1,0 +1,59 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.StringTokenizer;
+
+public class bj1931 {
+    public static void main(String[] args) throws Exception{
+//        N개의 회의 1< N < 100,000
+//        I 회의 - 시작시간/끝시간
+//
+//        각 회의가 겹치지 않도록 회의실을 사용할 수 있는 회의의 최대 개수-> 회의 시작 후 중간에 관둘 수 없다. 비선점형 스케줄링
+//        1. 회의 시간이 짧은 회의 순으로 정렬 (종료시간-시작시간)
+//
+//        배열로 각 시간에 Index 를 부여한다
+//        첫번째 회의시간을 구한다. (가장 빠르고 가장 짧은 회의)
+//        종료시간 - 시작시간의 차가 가장 작은 걸 구한다
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        // 1 <= N <= 100_000
+        int N = Integer.parseInt(br.readLine());
+        // 0 < time <= 2^31 - 1
+        int[][] time = new int[N][4];
+
+        //가장
+        for (int i=0;i<N;i++) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            time[i][0] = Integer.parseInt(st.nextToken()); // start time
+            time[i][1] = Integer.parseInt(st.nextToken()); // end time
+            time[i][2] = time[i][1] - time[i][0];
+            time[i][3] = i;
+        }
+
+        //빠른순으로 정렬
+        Arrays.sort(time, (a, b) -> Integer.compare(a[0], b[0]));
+
+        HashMap<Integer, Integer> scoreMap = new HashMap<>();
+        for (int i=0;i<time.length;i++) {
+            System.out.println(time[i][3] +" | " + time[i][0]+" ~ "+time[i][1]+" = "+time[i][2]);
+            scoreMap.put(time[i][3], N-i);
+        }
+
+        //회의 시간이 짧은 순으로 정렬
+        Arrays.sort(time, (a, b) -> Integer.compare(a[2], b[2]));
+        for (int i=0;i<time.length;i++) {
+            int score = scoreMap.get(time[i][3]);
+            System.out.println(time[i][3] +" | " + (score + N-i));
+
+            scoreMap.put(time[i][3], score + i);
+        }
+
+        for(int key : scoreMap.keySet()) {
+//            System.out.println(key +" | " + scoreMap.get(key));
+        }
+    }
+}
