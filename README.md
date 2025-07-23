@@ -21,7 +21,7 @@ AlgoStudy(알쓰)
 |---|---|---|---|---|---|---|---|
 |3회차|[pg76502](https://school.programmers.co.kr/learn/courses/30/lessons/76502)|경대|괄호 회전하기||🐣|🐧|⏰
 |3회차|[bj2343](https://www.acmicpc.net/problem/2343)|준아|기타 레슨||🐣|🐧|
-|3회차|[bj1931](https://www.acmicpc.net/problem/1931)|성수|회의실배정||🐣|🐧|⏰
+|3회차|[bj1931](https://www.acmicpc.net/problem/1931)|성수|회의실배정|👻|🐣|🐧|⏰
 |3회차|[bj11727](https://www.acmicpc.net/problem/11727)|한길|2×n 타일링 2|👻|🐣|🐧|
 |2회차|[bj1021](https://www.acmicpc.net/problem/1021)|경대|회전하는큐|❓|🐣|🐧|❓
 |2회차|[pg389479](https://school.programmers.co.kr/learn/courses/30/lessons/389479)|한길|서버증설횟수|👻|🐣|🐧|❓
