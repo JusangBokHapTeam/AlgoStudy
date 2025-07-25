@@ -21,7 +21,7 @@ AlgoStudy(알쓰)
 |---|---|---|---|---|---|---|---|
 |4회차|[pg86971](https://school.programmers.co.kr/learn/courses/30/lessons/86971)|성수|전력망을 둘로 나누기||||
 |4회차|[bj2644](https://www.acmicpc.net/problem/2644)|준아|촌수계산||🐣||
-|4회차|[bj1506](https://www.acmicpc.net/problem/1506)|한길|경찰서||||
+|4회차|[bj1012](https://www.acmicpc.net/problem/1012)|한길|유기농배추||||
 |4회차|[bj1052](https://www.acmicpc.net/problem/1052)|경대|물병||||
 |3회차|[pg76502](https://school.programmers.co.kr/learn/courses/30/lessons/76502)|경대|괄호 회전하기||🐣|🐧|⏰
 |3회차|[bj2343](https://www.acmicpc.net/problem/2343)|준아|기타 레슨||🐣|🐧|⏰
