@@ -1,0 +1,98 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class bj1012 {
+        // 가로길이 M, 세로길이 N의 밭을 순회
+        // 1로 주어진 위치마다 4방향 탐색하고, visited에 없으면 count+1후 좌표기록, visited에 4방향중 하나라도 있으면4방향중 하나라도 있으면 패스-> 이 묶음 수 만큼 배추벌레가 있으면 될듯
+        public static void main(String[] args) throws IOException {
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+            //테스트케이스
+            int T = Integer.parseInt(br.readLine());
+            for(int z = 0; z < T; z++){
+                StringTokenizer text = new StringTokenizer(br.readLine());
+                //세로
+                int n = Integer.parseInt(text.nextToken());
+                //가로
+                int m = Integer.parseInt(text.nextToken());
+                //1좌표 배추 갯수
+                int k = Integer.parseInt(text.nextToken());
+                int[][] farm = new int[n][m];
+                boolean[][] visited = new boolean[n][m];
+
+                for(int i = 0; i < k; i++){
+                    //다음에 들어오는 변수로 배추 좌표를 심어준다
+                    text = new StringTokenizer(br.readLine());
+                    int a = Integer.parseInt(text.nextToken());
+                    int b = Integer.parseInt(text.nextToken());
+                    farm[a][b] = 1;
+                }
+
+                int count = 0;
+                for(int i = 0; i < m; i++){
+                    for(int j = 0; j < n; j++){
+                        //배추가 심어진 곳 중 방문이 없는 것에 한해
+                        if(farm[i][j] == 1 && !visited[i][j]){
+                            bfs(farm, visited, i, j, n, m);
+                            count++;
+                        }
+                    }
+                }
+
+                System.out.println(count);
+            }
+        }
+
+    static void bfs(int[][] map, boolean[][] visited, int sx, int sy, int n, int m) {
+        //들어온 좌표는 무조건 visited기록, 그리고 해당 좌표 기준 4방향 탐색 후 추가로 visited를 기록해 줌
+        visited[sy][sx] = true;
+        Point point = new Point(sx, sy);
+
+        if(point.x < 1 || point.y < 1) {
+            //pass
+            return;
+        }
+        if(point.x + 1 > m || point.y + 1 > n) {
+            //pass
+            return;
+        }
+
+        int cnt = 0;
+//        상 -1,0 하 +1,0 좌 0,-1  우 0,+1
+        //상
+        if(map[point.x - 1][point.y] == 1 && !visited[point.x - 1][point.y]) {
+            visited[point.x - 1][point.y] = true;
+            cnt++;
+        }
+
+        //하
+        if(map[point.x + 1][point.y] == 1 && !visited[point.x + 1][point.y]) {
+            visited[point.x - 1][point.y] = true;
+            cnt++;
+        }
+
+        //좌
+        if(map[point.x][point.y-1] == 1 && !visited[point.x][point.y-1]) {
+            visited[point.x - 1][point.y] = true;
+            cnt++;
+        }
+
+        //우
+        if(map[point.x][point.y+1] == 1 && !visited[point.x][point.y+1]) {
+            visited[point.x - 1][point.y] = true;
+            cnt++;
+        }
+    }
+
+    //x와 y 좌표를 가진 포인터를 클래스로 정의하고 좌표를 찍어낸다.
+    static class Point {
+        int x;
+        int y;
+        Point(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+}
