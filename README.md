@@ -19,6 +19,7 @@ AlgoStudy(알쓰)
 #### Problem List
 |회차|번호|선정자|문제|한길|준아|경대|성수|
 |---|---|---|---|---|---|---|---|
+|5회차|[bj1747](https://www.acmicpc.net/problem/1747)|준아|소수&팰린드롬||||
 |4회차|[pg86971](https://school.programmers.co.kr/learn/courses/30/lessons/86971)|성수|전력망을 둘로 나누기||🐣|🐧|⚡ 
 |4회차|[bj2644](https://www.acmicpc.net/problem/2644)|준아|촌수계산||🐣|🐧|⚡
 |4회차|[bj1012](https://www.acmicpc.net/problem/1012)|한길|유기농배추|👻|🐣|🐧|⚡
