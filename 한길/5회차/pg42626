@@ -1,0 +1,28 @@
+import java.util.*;
+
+class Solution {
+    //최소힙
+    public int solution(int[] scoville, int K) {
+        int answer = 0;
+
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+        for(int i = 0 ; i < scoville.length ; i ++) {
+            minHeap.add(scoville[i]);
+        }
+        
+        //현재값, 다음노드값 수식을 구하고 K가 넘으면 카운트++
+        while (minHeap.size() > 1 && minHeap.peek() < K) {    
+            int first = minHeap.poll();
+            int second = minHeap.poll();
+            minHeap.add(first + (second * 2));
+            answer++;
+        }
+
+        //최종까지 돌렸으나 K보다 작으면 -1
+        if(minHeap.peek() < K) {
+            return -1;
+        }
+        
+        return answer;
+    }
+}
