@@ -19,7 +19,7 @@ AlgoStudy(알쓰)
 #### Problem List
 |회차|번호|선정자|문제|한길|준아|경대|성수|
 |---|---|---|---|---|---|---|---|
-|5회차|[pg42626](https://school.programmers.co.kr/learn/courses/30/lessons/42626)|한길|더 맵게||||
+|5회차|[pg42626](https://school.programmers.co.kr/learn/courses/30/lessons/42626)|한길|더 맵게|👻|||
 |5회차|[bj11729](https://www.acmicpc.net/problem/11729)|경대|하노이 탑 이동 순서|||🐧|
 |5회차|[pg250136](https://school.programmers.co.kr/learn/courses/30/lessons/250136)|성수|석유시추||||
 |5회차|[bj1747](https://www.acmicpc.net/problem/1747)|준아|소수&팰린드롬||||
