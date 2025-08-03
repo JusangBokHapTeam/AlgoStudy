@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int value = sc.nextInt();
+        while (true) {
+            if(isPrime(value) && isPalindrome(value)) {
+                break;
+            }
+            value++;
+        }
+        System.out.print(value);
+        sc.close();
+    }
+
+    private static boolean isPrime(int value) {
+        if(value == 0 || value == 1) {
+            return false;
+        }
+        for (int i =2; i <= value / 2; i ++) {
+            if(value % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static boolean isPalindrome(int value) {
+        String arr = Integer.toString(value);
+        int length = arr.length(); //길이를 2로 나눠서 처음과 끝 대조
+        for(int i = 0; i < length / 2 ; i ++) {
+            if(arr.charAt(i) != arr.charAt(length - i - 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
