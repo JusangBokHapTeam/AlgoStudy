@@ -1,0 +1,45 @@
+class Solution {
+    
+    static int[] dy = { -1, 0, 1, 0 };
+    static int[] dx = { 0, -1, 0, 1 };
+    static int group[][];
+    static boolean visited[][];
+    
+    public int solution(int[][] land) {
+        int answer = 0;
+        //1. 덩어리의 크기를 구한다.(덩어리에 속하는 좌표를 모은다) 상하좌우
+        //2. [][j]로 순회하면서 덩어리에 속하는 좌표가 있으면 해당 좌표의 크기를 합산한다.
+        group = land;
+        visited = new boolean[land.length][land[0].length];
+        
+        int groupNo = 1;//덩어리별 그룹번호를 넘버링하고 그룹번호-덩어리크기 매핑
+        for(int i = 0; i < land.length ; i ++) {
+            for(int j = 0; j < i ; j ++) {
+                dfs(i, j);
+            }
+        }        
+        return answer;
+    }
+    
+    private static void dfs (int x, int y, int groupNo) {
+        if(land[x][y] == 1) {
+            visited[x][y] = true;
+            group[x][y] = groupNo;
+        }
+        
+        for (int d = 0; d < 4 ; d ++) {
+            int nx = x = dx[d];
+            int ny = y + dy[d];
+            if(nx < 0 || ny < 0 || nx >= M || ny >= N) {
+                continue;
+            }
+            if(visited[nx][ny]) {
+                
+                
+            }
+            !group[nx][ny] || visited[nx][ny]) 
+            
+            dfs(nx, ny);
+        }
+    }
+}
