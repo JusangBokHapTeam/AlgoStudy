@@ -15,10 +15,11 @@ AlgoStudy(알쓰)
 # JusangbokHap algorithm problem practice book📝
 
 
-
+https://school.programmers.co.kr/learn/courses/30/lessons/42860
 #### Problem List
 |회차|번호|선정자|문제|한길|준아|경대|성수|
 |---|---|---|---|---|---|---|---|
+|6회차|[bj42680](https://school.programmers.co.kr/learn/courses/30/lessons/42860)|성수|조이스틱||||
 |6회차|[bj1916](https://www.acmicpc.net/problem/1916)| 준아|최소비용 구하기||||
 |6회차|[bj9663](https://www.acmicpc.net/problem/9663)|경대|N-Queen|||🐧|
 |6회차|[pg42586](https://school.programmers.co.kr/learn/courses/30/lessons/42586)|한길|기능개발||||
