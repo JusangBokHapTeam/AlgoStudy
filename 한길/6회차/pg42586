@@ -1,0 +1,35 @@
+import java.util.*;
+
+class Solution {
+    public int[] solution(int[] progresses, int[] speeds) {
+        int[] answer = {}; 
+        List<Integer> list = new ArrayList<>();
+        for(int i = 0; i < progresses.length; i ++){
+            if((100 - progresses[i]) % speeds[i] != 0){
+                list.add(((100 - progresses[i]) / speeds[i] ) + 1);
+            } else {
+              list.add((100 - progresses[i]) / speeds[i]);
+            }            
+        }
+        
+        List<Integer> list2 = new ArrayList<>();
+        int test = list.get(0);
+
+        int work = 1;
+        if(list.size() > 0){
+            for(int i = 1; i < list.size(); i++){
+                if(list.get(i) <= test ){
+                    work+= 1;
+                }else {
+                  list2.add(work);
+                    work = 1;
+                    test = list.get(i);
+                }
+            } 
+        }
+        list2.add(work);
+        answer = list2.stream().mapToInt(i->i).toArray();
+        
+        return answer;
+    }
+}
