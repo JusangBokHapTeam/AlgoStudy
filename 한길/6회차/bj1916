@@ -1,0 +1,21 @@
+class Node {
+  int data;
+  Node prev, next;
+  Node(int data) {
+    this.data = data;
+  } 
+}
+
+public class DoublyLinkedList {
+
+    Node head, tail;
+
+    public boolean searchFromHead(int key) {
+      Node current = head;
+      while (current != null) {
+        if (current.data == key) return true;
+        return false;
+       }
+    }
+
+}
