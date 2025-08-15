@@ -19,6 +19,7 @@ https://school.programmers.co.kr/learn/courses/30/lessons/42860
 #### Problem List
 |회차|번호|선정자|문제|한길|준아|경대|성수|
 |---|---|---|---|---|---|---|---|
+|7회차|[pg388352](https://school.programmers.co.kr/learn/courses/30/lessons/388352)|한길|비밀코드해독||||
 |7회차|[pg42883](https://school.programmers.co.kr/learn/courses/30/lessons/42883)|준아|큰 수 만들기||||
 |7회차|[pg42587](https://school.programmers.co.kr/learn/courses/30/lessons/42587)|경대|프로세스||||
 |6회차|[bj42680](https://school.programmers.co.kr/learn/courses/30/lessons/42860)|성수|조이스틱||🐣|🐧|🕹
