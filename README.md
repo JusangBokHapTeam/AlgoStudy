@@ -20,7 +20,7 @@ AlgoStudy(알쓰)
 |회차|번호|선정자|문제|한길|준아|경대|성수|
 |---|---|---|---|---|---|---|---|
 |8회차|[bj2239](https://www.acmicpc.net/problem/2239)|경대|스도쿠||||
-|8회차|[pg12979](https://school.programmers.co.kr/learn/courses/30/lessons/12979)|준아|기지국 설치||||
+|8회차|[pg12979](https://school.programmers.co.kr/learn/courses/30/lessons/12979)|준아|기지국 설치||🐣||
 |8회차|[pg67258](https://school.programmers.co.kr/learn/courses/30/lessons/67258)|성수|보석쇼핑||||
 |8회차|[pg42579](https://school.programmers.co.kr/learn/courses/30/lessons/42579)|한길|베스트앨범||||
 |7회차|[bg9207](https://www.acmicpc.net/problem/9207)|성수|페그 솔테리어||🐣||🕹
