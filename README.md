@@ -21,8 +21,8 @@ AlgoStudy(알쓰)
 |---|---|---|---|---|---|---|---|
 |8회차|[bj2239](https://www.acmicpc.net/problem/2239)|경대|스도쿠|||🐧|
 |8회차|[pg12979](https://school.programmers.co.kr/learn/courses/30/lessons/12979)|준아|기지국 설치||🐣||
-|8회차|[pg67258](https://school.programmers.co.kr/learn/courses/30/lessons/67258)|성수|보석쇼핑||||
-|8회차|[pg42579](https://school.programmers.co.kr/learn/courses/30/lessons/42579)|한길|베스트앨범||||
+|8회차|[pg67258](https://school.programmers.co.kr/learn/courses/30/lessons/67258)|성수|보석쇼핑||🐣||
+|8회차|[pg42579](https://school.programmers.co.kr/learn/courses/30/lessons/42579)|한길|베스트앨범||🐣||
 |7회차|[bg9207](https://www.acmicpc.net/problem/9207)|성수|페그 솔테리어||🐣||🕹
 |7회차|[pg388352](https://school.programmers.co.kr/learn/courses/30/lessons/388352)|한길|비밀코드해독|👻|🐣|🐧|
 |7회차|[pg42883](https://school.programmers.co.kr/learn/courses/30/lessons/42883)|준아|큰 수 만들기|👻|🐣|🐧|
